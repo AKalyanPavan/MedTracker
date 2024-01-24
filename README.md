@@ -8,6 +8,7 @@ Users can track different medication tracks, dosages, and medicine format like p
 
 - Kalyan Pavan Aravelli 1178922
 - Tahmid Hassan 1135463
+- Muhammed Umar Khan 1173637
 
 
 ## Features
