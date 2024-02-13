@@ -1,24 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hN7-68-odb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewControllerHome" id="BYZ-38-t0r" customClass="ViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azP-AV-iuP">
+                                <rect key="frame" x="94" y="504" width="205" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="a6W-f4-hd4"/>
+                                    <constraint firstAttribute="height" constant="49" id="vVg-gl-dhe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create New Tracker"/>
+                                <connections>
+                                    <action selector="gotoCreateTracker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNX-2q-txp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Zk-YI-sr6">
+                                <rect key="frame" x="146" y="197.66666666666666" width="100" height="96.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4rn-sX-dS9"/>
+                                    <constraint firstAttribute="width" constant="100" id="pOD-o2-ziJ"/>
+                                </constraints>
+                                <imageReference key="image" image="heart.text.square" catalog="system" renderingMode="hierarchical">
+                                    <hierarchicalColors>
+                                        <color systemColor="systemBlueColor"/>
+                                        <color systemColor="systemGreenColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedTracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-0G-3Df">
+                                <rect key="frame" x="127" y="327" width="139" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="00J-Ci-7d6"/>
+                                    <constraint firstAttribute="height" constant="30" id="jd0-NV-m6b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihE-1n-XRZ">
+                                <rect key="frame" x="94" y="406" width="205" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="pA3-C0-pjE"/>
+                                    <constraint firstAttribute="height" constant="49" id="xls-dN-Mwh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="My Trackers"/>
+                                <connections>
+                                    <action selector="gotoMyTrackers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dm5-SY-eqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVJ-cD-AR8">
+                                <rect key="frame" x="94" y="604" width="205" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="dBH-X2-QvL"/>
+                                    <constraint firstAttribute="height" constant="49" id="eVy-vC-7AF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Physicians Nearby"/>
+                                <connections>
+                                    <action selector="gotoPhysicians:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J40-KF-7pi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Zk-YI-sr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="998-1E-mwH"/>
+                            <constraint firstItem="ihE-1n-XRZ" firstAttribute="top" secondItem="7vE-0G-3Df" secondAttribute="bottom" constant="49" id="GRd-0o-CsJ"/>
+                            <constraint firstItem="7vE-0G-3Df" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="K2H-HF-H5N"/>
+                            <constraint firstItem="7vE-0G-3Df" firstAttribute="top" secondItem="8Zk-YI-sr6" secondAttribute="bottom" constant="31" id="Kba-TT-Obk"/>
+                            <constraint firstItem="8Zk-YI-sr6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="el0-UI-7ce"/>
+                            <constraint firstItem="azP-AV-iuP" firstAttribute="top" secondItem="ihE-1n-XRZ" secondAttribute="bottom" constant="49" id="mqY-gd-bTj"/>
+                            <constraint firstItem="azP-AV-iuP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="nEh-nG-alQ"/>
+                            <constraint firstItem="ihE-1n-XRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="rTm-tJ-wtk"/>
+                            <constraint firstItem="rVJ-cD-AR8" firstAttribute="top" secondItem="azP-AV-iuP" secondAttribute="bottom" constant="51" id="wrw-gd-ZVr"/>
+                            <constraint firstItem="rVJ-cD-AR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="y6E-Oy-x82"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="N03-tp-L6z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Create New Tracker View Controller-->
+        <scene sceneID="DfH-Gs-MYo">
+            <objects>
+                <viewController storyboardIdentifier="CreateNewTrackerViewController" id="ytT-JT-luN" customClass="CreateNewTrackerViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IN0-tX-mbj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yb-cl-OUf">
+                                <rect key="frame" x="28" y="95" width="69.666666666666671" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home"/>
+                                <connections>
+                                    <action selector="gobackToHome:" destination="ytT-JT-luN" eventType="touchUpInside" id="arh-T1-bRJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c6N-EG-JVO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Yb-cl-OUf" firstAttribute="top" secondItem="c6N-EG-JVO" secondAttribute="top" constant="36" id="W2H-DF-gKg"/>
+                            <constraint firstItem="8Yb-cl-OUf" firstAttribute="leading" secondItem="c6N-EG-JVO" secondAttribute="leading" constant="28" id="hlj-p3-g1N"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRA-7l-5j1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.2519083969464" y="3.5211267605633805"/>
+        </scene>
+        <!--My Trackers View Controller-->
+        <scene sceneID="NN8-FK-7T9">
+            <objects>
+                <viewController storyboardIdentifier="MyTrackersViewController" id="MJJ-NU-T5a" customClass="MyTrackersViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fA5-kq-OSg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-KV-u3H">
+                                <rect key="frame" x="28" y="95" width="70" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home"/>
+                                <connections>
+                                    <action selector="gobackToHome:" destination="MJJ-NU-T5a" eventType="touchUpInside" id="UuF-yO-ppE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vJV-gg-Kv0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="leading" secondItem="vJV-gg-Kv0" secondAttribute="leading" constant="28" id="Whc-gv-mZd"/>
+                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="top" secondItem="vJV-gg-Kv0" secondAttribute="top" constant="36" id="qZS-uE-CUB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlY-kE-wHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3086" y="4"/>
+        </scene>
+        <!--Physicians View Controller-->
+        <scene sceneID="400-C4-f9K">
+            <objects>
+                <viewController storyboardIdentifier="PhysiciansViewController" id="Goi-Or-uvK" customClass="PhysiciansViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HUi-4t-cbo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6x-tR-fSR">
+                                <rect key="frame" x="28" y="95" width="70" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Home"/>
+                                <connections>
+                                    <action selector="gobackToHome:" destination="Goi-Or-uvK" eventType="touchUpInside" id="Ngc-4g-GHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bLf-uO-e2f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z6x-tR-fSR" firstAttribute="top" secondItem="bLf-uO-e2f" secondAttribute="top" constant="36" id="UxL-aJ-FmE"/>
+                            <constraint firstItem="z6x-tR-fSR" firstAttribute="leading" secondItem="bLf-uO-e2f" secondAttribute="leading" constant="28" id="hH9-Px-EMv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdz-4N-RzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4146" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vdY-hv-3aL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hN7-68-odb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zH5-R3-zqE">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TmU-Ax-8Gn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FwG-VX-Ubg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.text.square" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

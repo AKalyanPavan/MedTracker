@@ -13,6 +13,9 @@
 		415872032B60B3DA0043D30F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415872012B60B3DA0043D30F /* Main.storyboard */; };
 		415872052B60B3DB0043D30F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415872042B60B3DB0043D30F /* Assets.xcassets */; };
 		415872082B60B3DB0043D30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415872062B60B3DB0043D30F /* LaunchScreen.storyboard */; };
+		415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */; };
+		415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */; };
+		415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		415872042B60B3DB0043D30F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		415872072B60B3DB0043D30F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		415872092B60B3DB0043D30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewController.swift; sourceTree = "<group>"; };
+		415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrackersViewController.swift; sourceTree = "<group>"; };
+		415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiciansViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		415871FA2B60B3DA0043D30F /* MedTracker */ = {
 			isa = PBXGroup;
 			children = (
+				415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */,
+				415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */,
+				415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */,
 				415871FB2B60B3DA0043D30F /* AppDelegate.swift */,
 				415871FD2B60B3DA0043D30F /* SceneDelegate.swift */,
 				415871FF2B60B3DA0043D30F /* ViewController.swift */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */,
 				415872002B60B3DA0043D30F /* ViewController.swift in Sources */,
 				415871FC2B60B3DA0043D30F /* AppDelegate.swift in Sources */,
+				415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */,
+				415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
