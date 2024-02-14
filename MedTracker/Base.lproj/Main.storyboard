@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hN7-68-odb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hN7-68-odb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -137,25 +138,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-KV-u3H">
-                                <rect key="frame" x="28" y="95" width="70" height="35"/>
+                                <rect key="frame" x="16" y="59" width="70" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Home"/>
                                 <connections>
                                     <action selector="gobackToHome:" destination="MJJ-NU-T5a" eventType="touchUpInside" id="UuF-yO-ppE"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-MS-Irx">
+                                <rect key="frame" x="16" y="147" width="361" height="558"/>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ptR-Bt-gXl">
+                                <rect key="frame" x="16" y="102" width="361" height="32"/>
+                                <segments>
+                                    <segment title="Capsule"/>
+                                    <segment title="Syrup"/>
+                                    <segment title="Pain Relief"/>
+                                    <segment title="Vitamin"/>
+                                    <segment title="Antibiotics"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="MJJ-NU-T5a" eventType="valueChanged" id="daE-PO-uNM"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vJV-gg-Kv0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="leading" secondItem="vJV-gg-Kv0" secondAttribute="leading" constant="28" id="Whc-gv-mZd"/>
-                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="top" secondItem="vJV-gg-Kv0" secondAttribute="top" constant="36" id="qZS-uE-CUB"/>
+                            <constraint firstItem="LJ9-MS-Irx" firstAttribute="leading" secondItem="vJV-gg-Kv0" secondAttribute="leading" constant="16" id="NDP-Fv-mcI"/>
+                            <constraint firstItem="ptR-Bt-gXl" firstAttribute="leading" secondItem="0Zj-KV-u3H" secondAttribute="leading" id="RTh-uf-pdt"/>
+                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="leading" secondItem="fA5-kq-OSg" secondAttribute="leadingMargin" id="UBl-V5-FkA"/>
+                            <constraint firstItem="LJ9-MS-Irx" firstAttribute="top" secondItem="ptR-Bt-gXl" secondAttribute="bottom" constant="14" id="UMX-aW-LKf"/>
+                            <constraint firstItem="ptR-Bt-gXl" firstAttribute="trailing" secondItem="LJ9-MS-Irx" secondAttribute="trailing" id="YaJ-s7-YLl"/>
+                            <constraint firstItem="vJV-gg-Kv0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Zj-KV-u3H" secondAttribute="trailing" symbolic="YES" id="gSE-4S-Afy"/>
+                            <constraint firstItem="LJ9-MS-Irx" firstAttribute="centerY" secondItem="fA5-kq-OSg" secondAttribute="centerY" id="h2f-td-hFP"/>
+                            <constraint firstItem="LJ9-MS-Irx" firstAttribute="centerX" secondItem="fA5-kq-OSg" secondAttribute="centerX" id="naB-CH-5OK"/>
+                            <constraint firstItem="ptR-Bt-gXl" firstAttribute="top" secondItem="0Zj-KV-u3H" secondAttribute="bottom" constant="8" symbolic="YES" id="qVb-SO-JtY"/>
+                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="top" secondItem="vJV-gg-Kv0" secondAttribute="top" id="sEj-vD-tTJ"/>
+                            <constraint firstItem="vJV-gg-Kv0" firstAttribute="trailing" secondItem="LJ9-MS-Irx" secondAttribute="trailing" constant="16" id="x5I-wD-AEL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="medicationListView" destination="LJ9-MS-Irx" id="Axq-hu-38Z"/>
+                        <outlet property="medicationTypeSegmentedControl" destination="ptR-Bt-gXl" id="jhJ-3s-075"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlY-kE-wHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3086" y="4"/>
+            <point key="canvasLocation" x="3084.7328244274809" y="3.5211267605633805"/>
         </scene>
         <!--Physicians View Controller-->
         <scene sceneID="400-C4-f9K">
@@ -211,13 +241,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -16,6 +16,8 @@
 		415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */; };
 		415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */; };
 		415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */; };
+		8F97338E2B7C522000822444 /* MedicationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97338D2B7C522000822444 /* MedicationType.swift */; };
+		8F9733902B7C52D300822444 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97338F2B7C52D300822444 /* Medication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewController.swift; sourceTree = "<group>"; };
 		415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrackersViewController.swift; sourceTree = "<group>"; };
 		415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiciansViewController.swift; sourceTree = "<group>"; };
+		8F97338D2B7C522000822444 /* MedicationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationType.swift; sourceTree = "<group>"; };
+		8F97338F2B7C52D300822444 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				415871FB2B60B3DA0043D30F /* AppDelegate.swift */,
 				415871FD2B60B3DA0043D30F /* SceneDelegate.swift */,
 				415871FF2B60B3DA0043D30F /* ViewController.swift */,
+				8F97338D2B7C522000822444 /* MedicationType.swift */,
+				8F97338F2B7C52D300822444 /* Medication.swift */,
 				415872012B60B3DA0043D30F /* Main.storyboard */,
 				415872042B60B3DB0043D30F /* Assets.xcassets */,
 				415872062B60B3DB0043D30F /* LaunchScreen.storyboard */,
@@ -147,11 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F9733902B7C52D300822444 /* Medication.swift in Sources */,
 				415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */,
 				415872002B60B3DA0043D30F /* ViewController.swift in Sources */,
 				415871FC2B60B3DA0043D30F /* AppDelegate.swift in Sources */,
 				415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */,
 				415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */,
+				8F97338E2B7C522000822444 /* MedicationType.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
