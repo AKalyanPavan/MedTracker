@@ -9,6 +9,7 @@ import UIKit
 
 class PhysiciansViewController: UIViewController {
 
+    @IBOutlet weak var thisistest: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
