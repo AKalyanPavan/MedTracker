@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import Observation
 
+@Observable
 final class MedTrackerStore: ObservableObject {
-    @Published var medTrackers: [MedTracker]
+    var medTrackers: [MedTracker]
     
     init(medTrackers: [MedTracker]) {
         self.medTrackers = medTrackers
@@ -17,8 +19,8 @@ final class MedTrackerStore: ObservableObject {
 
 extension MedTrackerStore {
     static var mockData = [
-//        MedTracker(name: "Chrocine", type: "Syrup", dosagesLeft: 23, description: "Sample"),
-        MedTracker(name: "", type: "", dosagesLeft: 0, description: ""),
+        MedTracker(name: "Chrocine", type: "Syrup", dosagesLeft: 23, description: "Sample"),
+//        MedTracker(name: "", type: "", dosagesLeft: 0, description: ""),
     ]
     
     static var testTrackersStore: MedTrackerStore = MedTrackerStore(medTrackers: mockData)

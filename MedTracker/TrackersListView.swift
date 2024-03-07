@@ -9,12 +9,45 @@ import Foundation
 import SwiftUI
 
 struct TrackersListView: View {
-    @ObservedObject var viewModel: TrackersListViewModel
+    @State var viewModel: TrackersListViewModel
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.listData) { tracker in
                     TrackerRow(medTracker: tracker)
+                }
+                .onMove(perform: viewModel.moveTracker)
+                .onDelete(perform: viewModel.deleteTracker)
+                
+                
+                HStack{
+                    Spacer()
+                    Text(viewModel.displayCount)
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                }
+            }
+            .navigationTitle(viewModel.navTitle)
+            .searchable(text: $viewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for Trackers")
+            .onChange(of: viewModel.searchTerm) {
+                viewModel.filterSearchResults()
+            }
+            .toolbar{
+                HStack{
+                    Button("Add"){
+                        withAnimation{
+                            
+                        }
+                    }
+                    EditButton()
+                    Spacer()
+    
+                    Button("Delete All") {
+                        withAnimation {
+                            viewModel.deleteAllTracker()
+                        }
+                    }
                 }
             }
         }
