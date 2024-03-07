@@ -12,11 +12,15 @@ import Foundation
 class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var innerView: UIView!
-    @IBOutlet weak var dosageScheduleView: UIStackView!
+    
+    @IBOutlet weak var descriptionText: UITextView!
     
     @IBOutlet weak var nameOfTrackerText: UITextField!
     @IBOutlet weak var typeOfMedicineText: UITextField!
     @IBOutlet weak var dosagesLeft: UITextField!
+    
+    var medTrackers: [MedTracker] = []
+    var medTrackerStore: MedTrackerStore = MedTrackerStore.testTrackersStore
     
     let options = ["Tablet", "Syrup", "Capsule", "Injection", "Powder", "Inhaler", "Drops"]
     var pickerView = UIPickerView()
@@ -33,21 +37,25 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
 
         let label3 = UILabel()
         label3.text = "Label 3"
-
-        // Add the UILabels to the stack view
-        dosageScheduleView.addArrangedSubview(label1)
-        dosageScheduleView.addArrangedSubview(label2)
-        dosageScheduleView.addArrangedSubview(label3)
-
-        // Customize stack view properties
-        dosageScheduleView.axis = .vertical
-        dosageScheduleView.alignment = .center
-        dosageScheduleView.distribution = .fillEqually
-        dosageScheduleView.spacing = 8
+        
+        nameOfTrackerText.contentHorizontalAlignment = .left
+        nameOfTrackerText.adjustsFontSizeToFitWidth = false
         
         nameOfTrackerText.layer.borderColor = UIColor.systemGreen.cgColor
         nameOfTrackerText.layer.borderWidth = 1
         nameOfTrackerText.layer.cornerRadius = 5
+        
+        typeOfMedicineText.layer.borderColor = UIColor.systemGreen.cgColor
+        typeOfMedicineText.layer.borderWidth = 1
+        typeOfMedicineText.layer.cornerRadius = 5
+        
+        dosagesLeft.layer.borderColor = UIColor.systemGreen.cgColor
+        dosagesLeft.layer.borderWidth = 1
+        dosagesLeft.layer.cornerRadius = 5
+        
+        descriptionText.layer.borderWidth = 1.0
+        descriptionText.layer.borderColor = UIColor.systemGreen.cgColor
+        descriptionText.layer.cornerRadius = 8.0
         
         dosagesLeft.delegate = self
         dosagesLeft.keyboardType = .numberPad
@@ -88,51 +96,66 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
         }
     }
     
-    @IBAction func addButtonTapped(_ sender: UIButton) {
-        
-        let options = ["Tablet", "Syrup", "Capsule", "Injection", "Powder", "Inhaler", "Drops"]
-        let newLabel = UITextField()
-        
-        let newPicker = UIPickerView()
-        newPicker.delegate = self
-        newPicker.dataSource = self
-        
-        func newPicker(_ newPicker: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return options.count
-        }
-        
-        func newPicker(_ newPicker: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return options[row]
-        }
-
-        func newPicker(_ newPicker: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            newLabel.text = options[row]
-        }
-
-        newLabel.inputView = newPicker
-        
-        let toolbar = UIToolbar()
-        toolbar.barStyle = .default
-        toolbar.isTranslucent = true
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
-        toolbar.setItems([doneButton], animated: false)
-    
-        dosageScheduleView.addArrangedSubview(newLabel)
-        
-        innerView.frame.size.height = innerView.bounds.height + 28.0
-
-        // Refresh the layout
-        dosageScheduleView.layoutIfNeeded()
-    }
-    
     @IBAction func gobackToHome(_ sender: Any) {
         let homePageStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = homePageStoryBoard.instantiateViewController(withIdentifier: "ViewControllerHome") as! ViewController
         viewController.navigationItem.hidesBackButton = true
         self.navigationController!.pushViewController(viewController, animated: true)
     }
+    
+    @IBAction func saveTracker(_ sender: Any) {
+        
+        let name = nameOfTrackerText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if(checkForEmpty(trimmedText: name, nameOfField: "Tracker Name")){
+            return
+        }
+        
+        let type = typeOfMedicineText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if(checkForEmpty(trimmedText: type, nameOfField: "Type of Medicine")){
+            return
+        }
+        
+        let dosagesLeft = dosagesLeft.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if(checkForEmpty(trimmedText: dosagesLeft, nameOfField: "Dosages Left")){
+            return
+        }
+        
+        let description = descriptionText.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if(checkForEmpty(trimmedText: description, nameOfField: "Description")){
+            return
+        }
+        
+        let newMedTracker = MedTracker(name: name, type: type, dosagesLeft: Int(dosagesLeft) ?? 0, description: description)
+        medTrackers.append(newMedTracker)
+        medTrackerStore.medTrackers.append(newMedTracker)
+        
+//        let myTrackersStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let myTrackersViewController = myTrackersStoryBoard.instantiateViewController(withIdentifier: "MyTrackersViewController") as! MyTrackersViewController
+//        myTrackersViewController.navigationItem.hidesBackButton = true
+//        myTrackersViewController.medTrackers = medTrackers
+//        self.navigationController!.pushViewController(myTrackersViewController, animated: true)
+        
+        let trackersListView = TrackersListView(viewModel: TrackersListViewModel())
+                let hostingController = UIHostingController(rootView: trackersListView)
+                present(hostingController, animated: true, completion: nil)
+    }
+    
+    func checkForEmpty(trimmedText: String, nameOfField: String) -> Bool {
+        if trimmedText.isEmpty {
+            showAlert(message: "\(nameOfField) cannot be empty")
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var medTrackers: [MedTracker] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +19,7 @@ class ViewController: UIViewController {
         let createNewStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let createNewViewController = createNewStoryBoard.instantiateViewController(withIdentifier: "CreateNewTrackerViewController") as! CreateNewTrackerViewController
         createNewViewController.navigationItem.hidesBackButton = true
+        createNewViewController.medTrackers = medTrackers
         self.navigationController!.pushViewController(createNewViewController, animated: true)
     }
     @IBAction func gotoMyTrackers(_ sender: Any) {
