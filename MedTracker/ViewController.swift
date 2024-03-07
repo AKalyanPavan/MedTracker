@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -23,10 +24,14 @@ class ViewController: UIViewController {
         self.navigationController!.pushViewController(createNewViewController, animated: true)
     }
     @IBAction func gotoMyTrackers(_ sender: Any) {
-        let myTrackersStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        let myTrackersViewController = myTrackersStoryBoard.instantiateViewController(withIdentifier: "MyTrackersViewController") as! MyTrackersViewController
-        myTrackersViewController.navigationItem.hidesBackButton = true
-        self.navigationController!.pushViewController(myTrackersViewController, animated: true)
+//        let myTrackersStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let myTrackersViewController = myTrackersStoryBoard.instantiateViewController(withIdentifier: "MyTrackersViewController") as! MyTrackersViewController
+//        myTrackersViewController.navigationItem.hidesBackButton = true
+//        self.navigationController!.pushViewController(myTrackersViewController, animated: true)
+        
+        let trackersListView = TrackersListView(viewModel: TrackersListViewModel())
+        let hostingController = UIHostingController(rootView: trackersListView)
+        navigationController?.pushViewController(hostingController, animated: true)
     }
     @IBAction func gotoPhysicians(_ sender: Any) {
         let physiciansStoryBoard = UIStoryboard(name: "Main", bundle: nil)
