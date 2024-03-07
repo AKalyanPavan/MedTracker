@@ -115,8 +115,8 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
             return
         }
         
-        let dosagesLeft = dosagesLeft.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        if(checkForEmpty(trimmedText: dosagesLeft, nameOfField: "Dosages Left")){
+        let dosagesRemaining = dosagesLeft.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        if(checkForEmpty(trimmedText: dosagesRemaining, nameOfField: "Dosages Left")){
             return
         }
         
@@ -125,7 +125,7 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
             return
         }
         
-        let newMedTracker = MedTracker(name: name, type: type, dosagesLeft: Int(dosagesLeft) ?? 0, description: description)
+        let newMedTracker = MedTracker(name: name, type: type, dosagesLeft: Int(dosagesRemaining) ?? 0, description: description)
         medTrackers.append(newMedTracker)
         medTrackerStore.medTrackers.append(newMedTracker)
         
@@ -134,6 +134,11 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
 //        myTrackersViewController.navigationItem.hidesBackButton = true
 //        myTrackersViewController.medTrackers = medTrackers
 //        self.navigationController!.pushViewController(myTrackersViewController, animated: true)
+        
+        nameOfTrackerText.text = ""
+        dosagesLeft.text = ""
+        descriptionText.text = ""
+        typeOfMedicineText.text = ""
         
         let trackersListView = TrackersListView(viewModel: TrackersListViewModel())
                 let hostingController = UIHostingController(rootView: trackersListView)
