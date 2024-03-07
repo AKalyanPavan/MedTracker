@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hN7-68-odb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hN7-68-odb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -183,14 +183,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRc-mo-Jwd">
-                                                <rect key="frame" x="40.000000000000007" y="698" width="69.666666666666686" height="35"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Home"/>
-                                                <connections>
-                                                    <action selector="gobackToHome:" destination="ytT-JT-luN" eventType="touchUpInside" id="atL-C6-Nsh"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-Yn-GFn">
                                                 <rect key="frame" x="39.999999999999993" y="392" width="100.33333333333331" height="24"/>
                                                 <constraints>
@@ -229,10 +221,8 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                         <constraints>
-                                            <constraint firstItem="jRc-mo-Jwd" firstAttribute="leading" secondItem="1Qg-kR-DE8" secondAttribute="leading" constant="40" id="0KC-Fg-VH7"/>
                                             <constraint firstAttribute="height" constant="1500" id="3gw-4P-EbX"/>
                                             <constraint firstItem="4Xl-Jc-KPG" firstAttribute="top" secondItem="ash-bm-tBt" secondAttribute="bottom" constant="10" id="4wK-PY-meT"/>
-                                            <constraint firstItem="jRc-mo-Jwd" firstAttribute="top" secondItem="clG-7g-ZwC" secondAttribute="bottom" constant="90" id="6a5-9i-f6w"/>
                                             <constraint firstItem="ash-bm-tBt" firstAttribute="top" secondItem="YG0-RM-Luj" secondAttribute="bottom" constant="20" id="6vn-Sc-Gv2"/>
                                             <constraint firstItem="YG0-RM-Luj" firstAttribute="top" secondItem="utR-zR-ZyW" secondAttribute="bottom" constant="10" id="9Nz-lp-rRC"/>
                                             <constraint firstItem="HrF-cN-6iP" firstAttribute="leading" secondItem="1Qg-kR-DE8" secondAttribute="leading" constant="40" id="9VP-zI-KbN"/>
@@ -286,35 +276,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRA-7l-5j1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2057.2519083969464" y="3.5211267605633805"/>
-        </scene>
-        <!--My Trackers View Controller-->
-        <scene sceneID="NN8-FK-7T9">
-            <objects>
-                <viewController storyboardIdentifier="MyTrackersViewController" id="MJJ-NU-T5a" customClass="MyTrackersViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fA5-kq-OSg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-KV-u3H">
-                                <rect key="frame" x="28" y="721" width="70" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Home"/>
-                                <connections>
-                                    <action selector="gobackToHome:" destination="MJJ-NU-T5a" eventType="touchUpInside" id="UuF-yO-ppE"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vJV-gg-Kv0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="leading" secondItem="vJV-gg-Kv0" secondAttribute="leading" constant="28" id="Whc-gv-mZd"/>
-                            <constraint firstItem="0Zj-KV-u3H" firstAttribute="top" secondItem="vJV-gg-Kv0" secondAttribute="top" constant="662" id="qZS-uE-CUB"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XlY-kE-wHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3084.7328244274809" y="3.5211267605633805"/>
         </scene>
         <!--Physicians View Controller-->
         <scene sceneID="400-C4-f9K">
@@ -408,7 +369,7 @@
     <resources>
         <image name="heart.text.square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

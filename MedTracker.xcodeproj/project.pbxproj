@@ -14,7 +14,6 @@
 		415872052B60B3DB0043D30F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 415872042B60B3DB0043D30F /* Assets.xcassets */; };
 		415872082B60B3DB0043D30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415872062B60B3DB0043D30F /* LaunchScreen.storyboard */; };
 		415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */; };
-		415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */; };
 		415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */; };
 		41E8980F2B979A1200DE561D /* medTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8980E2B979A1200DE561D /* medTracker.swift */; };
 		41E898152B97F55E00DE561D /* TrackerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E898142B97F55E00DE561D /* TrackerRow.swift */; };
@@ -34,7 +33,6 @@
 		415872072B60B3DB0043D30F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		415872092B60B3DB0043D30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewController.swift; sourceTree = "<group>"; };
-		415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTrackersViewController.swift; sourceTree = "<group>"; };
 		415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiciansViewController.swift; sourceTree = "<group>"; };
 		41E8980E2B979A1200DE561D /* medTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medTracker.swift; sourceTree = "<group>"; };
 		41E898142B97F55E00DE561D /* TrackerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRow.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 			children = (
 				41E8980D2B9794DF00DE561D /* Model */,
 				41EAD9522B8A517000B5224F /* DosageSchedule.swift */,
-				415AA8B72B7C1EB7002B5CF7 /* MyTrackersViewController.swift */,
 				415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */,
 				415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */,
 				415871FB2B60B3DA0043D30F /* AppDelegate.swift */,
@@ -177,7 +174,6 @@
 				415872002B60B3DA0043D30F /* ViewController.swift in Sources */,
 				415871FC2B60B3DA0043D30F /* AppDelegate.swift in Sources */,
 				415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */,
-				415AA8B82B7C1EB7002B5CF7 /* MyTrackersViewController.swift in Sources */,
 				41E8980F2B979A1200DE561D /* medTracker.swift in Sources */,
 				41E898152B97F55E00DE561D /* TrackerRow.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,

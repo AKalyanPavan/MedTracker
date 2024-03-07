@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TrackersListView: View {
     @State var viewModel: TrackersListViewModel
+    @State var isAddingTracker = false;
     
     var body: some View {
         NavigationStack {
@@ -35,14 +36,8 @@ struct TrackersListView: View {
             }
             .toolbar{
                 HStack{
-                    Button("Add"){
-                        withAnimation{
-                            
-                        }
-                    }
                     EditButton()
                     Spacer()
-    
                     Button("Delete All") {
                         withAnimation {
                             viewModel.deleteAllTracker()

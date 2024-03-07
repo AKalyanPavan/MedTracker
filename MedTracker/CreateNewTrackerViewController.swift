@@ -94,13 +94,13 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
         } else {
             print("No occurrences found.")
         }
+        
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(goBack))
+        navigationItem.leftBarButtonItem = backButton
     }
     
-    @IBAction func gobackToHome(_ sender: Any) {
-        let homePageStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = homePageStoryBoard.instantiateViewController(withIdentifier: "ViewControllerHome") as! ViewController
-        viewController.navigationItem.hidesBackButton = true
-        self.navigationController!.pushViewController(viewController, animated: true)
+    @objc func goBack() {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveTracker(_ sender: Any) {
