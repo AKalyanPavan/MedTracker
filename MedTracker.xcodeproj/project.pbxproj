@@ -21,6 +21,7 @@
 		41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */; };
 		41E8981D2B9812DF00DE561D /* TrackersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8981C2B9812DF00DE561D /* TrackersListView.swift */; };
 		41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAD9522B8A517000B5224F /* DosageSchedule.swift */; };
+		8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersListViewModel.swift; sourceTree = "<group>"; };
 		41E8981C2B9812DF00DE561D /* TrackersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersListView.swift; sourceTree = "<group>"; };
 		41EAD9522B8A517000B5224F /* DosageSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageSchedule.swift; sourceTree = "<group>"; };
+		8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewControllerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				41E898142B97F55E00DE561D /* TrackerRow.swift */,
 				41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */,
 				41E8981C2B9812DF00DE561D /* TrackersListView.swift */,
+				8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */,
 			);
 			path = MedTracker;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				41E898152B97F55E00DE561D /* TrackerRow.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,
 				41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */,
+				8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */,
 				41E898172B97F8B000DE561D /* MedTrackerStore.swift in Sources */,
 				41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */,
 				41E8981D2B9812DF00DE561D /* TrackersListView.swift in Sources */,

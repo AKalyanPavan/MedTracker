@@ -7,6 +7,7 @@
 
 import Foundation
 import Observation
+import UIKit
 
 @Observable
 final class MedTrackerStore: ObservableObject {
@@ -19,7 +20,7 @@ final class MedTrackerStore: ObservableObject {
 
 extension MedTrackerStore {
     static var mockData = [
-        MedTracker(name: "Chrocine", type: "Syrup", dosagesLeft: 23, description: "Sample"),
+        MedTracker(name: "Chrocine", type: "Syrup", dosagesLeft: 23, description: "Sample", image: UIImage(named: "medicine")!),
 //        MedTracker(name: "", type: "", dosagesLeft: 0, description: ""),
     ]
     

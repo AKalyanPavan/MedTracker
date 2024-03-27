@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 import Foundation
 
-class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var innerView: UIView!
     
@@ -24,6 +24,8 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
     
     let options = ["Tablet", "Syrup", "Capsule", "Injection", "Powder", "Inhaler", "Drops"]
     var pickerView = UIPickerView()
+    
+    var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,9 +127,16 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
             return
         }
         
-        let newMedTracker = MedTracker(name: name, type: type, dosagesLeft: Int(dosagesRemaining) ?? 0, description: description)
+        guard let image = selectedImage else {
+            showAlert(message: "Please select an image!")
+            return
+        }
+        
+        let newMedTracker = MedTracker(name: name, type: type, dosagesLeft: Int(dosagesRemaining) ?? 0, description: description, image: selectedImage ?? UIImage(named: "medicine")!)
         medTrackers.append(newMedTracker)
         medTrackerStore.medTrackers.append(newMedTracker)
+        
+        selectedImage = nil
         
 //        let myTrackersStoryBoard = UIStoryboard(name: "Main", bundle: nil)
 //        let myTrackersViewController = myTrackersStoryBoard.instantiateViewController(withIdentifier: "MyTrackersViewController") as! MyTrackersViewController
@@ -144,6 +153,25 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
                 let hostingController = UIHostingController(rootView: trackersListView)
                 present(hostingController, animated: true, completion: nil)
     }
+    
+    @IBAction func addPhoto(_ sender: UIButton) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            selectedImage = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+
     
     func checkForEmpty(trimmedText: String, nameOfField: String) -> Bool {
         if trimmedText.isEmpty {

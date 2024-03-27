@@ -10,16 +10,23 @@ import SwiftUI
 struct TrackerRow: View {
     var medTracker: MedTracker
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(medTracker.name)
-                .font(.largeTitle)
-            Text("\(String(medTracker.dosagesLeft)) Dosages")
-            Spacer()
-            Text(medTracker.type)
-            Spacer()
-            Text(medTracker.description)
+        HStack{
+            Image(uiImage: medTracker.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .frame(width: 75, height: 75)
+            VStack(alignment: .leading) {
+                Text(medTracker.name)
+                    .font(.largeTitle)
+                Text("\(String(medTracker.dosagesLeft)) Dosages")
+                Spacer()
+                Text(medTracker.type)
+                Spacer()
+                Text(medTracker.description)
+            }
+            .frame(height: 100)
         }
-        .frame(height: 100)
     }
 }
 

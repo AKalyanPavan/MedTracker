@@ -12,6 +12,7 @@ struct TrackersListView: View {
     @State var viewModel: TrackersListViewModel
     @State var isAddingTracker = false;
     
+    
     var body: some View {
         NavigationStack {
             List {
@@ -36,6 +37,9 @@ struct TrackersListView: View {
             }
             .toolbar{
                 HStack{
+//                    Button("Add") {
+//                        isAddingTracker = true
+//                    }
                     EditButton()
                     Spacer()
                     Button("Delete All") {
@@ -44,6 +48,9 @@ struct TrackersListView: View {
                         }
                     }
                 }
+            }
+            .fullScreenCover(isPresented: $isAddingTracker) {
+                CreateNewTrackerViewControllerWrapper()
             }
         }
     }
