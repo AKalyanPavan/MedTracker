@@ -11,6 +11,7 @@ import SwiftUI
 struct TrackersListView: View {
     @State var viewModel: TrackersListViewModel
     @State var isAddingTracker = false;
+    @State var showAlert = false;
     
     
     var body: some View {
@@ -43,9 +44,19 @@ struct TrackersListView: View {
                     EditButton()
                     Spacer()
                     Button("Delete All") {
-                        withAnimation {
-                            viewModel.deleteAllTracker()
-                        }
+                        showAlert = true
+                    }
+                    .alert(isPresented: $showAlert){
+                        Alert(
+                            title: Text("Delete All Trackers"),
+                            message: Text("Are you sure you want to delete all trackers? This action cannot be undone."),
+                            primaryButton: .destructive(Text("Delete")) {
+                                withAnimation {
+                                    viewModel.deleteAllTracker()
+                                }
+                            },
+                            secondaryButton: .cancel(Text("Cancel"))
+                        )
                     }
                 }
             }
