@@ -1,0 +1,79 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ Dosages" : {
+
+    },
+    "Are you sure you want to delete all trackers? This action cannot be undone." : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Create New Tracker" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create New Tracker"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer un nouveau suivi"
+          }
+        }
+      }
+    },
+    "Dark Mode" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete All" : {
+
+    },
+    "Delete All Trackers" : {
+
+    },
+    "English" : {
+
+    },
+    "French" : {
+
+    },
+    "Language" : {
+
+    },
+    "My Trackers" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Trackers"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes traceurs"
+          }
+        }
+      }
+    },
+    "Search for Trackers" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Theme" : {
+
+    }
+  },
+  "version" : "1.0"
+}

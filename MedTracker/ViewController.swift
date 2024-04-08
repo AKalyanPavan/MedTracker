@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ThemeManager.applyTheme()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(didTapSettings))
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted {
                 print("Notification permission granted")
@@ -25,6 +29,12 @@ class ViewController: UIViewController {
         }
         
         scheduleNotification()
+    }
+    
+    @objc private func didTapSettings(){
+        let settingsView = SettingsView()
+        let settingsHostingController = UIHostingController(rootView: settingsView)
+        self.navigationController?.pushViewController(settingsHostingController, animated: true)
     }
     
     @IBAction func gotoCreateTracker(_ sender: Any) {
@@ -57,7 +67,7 @@ class ViewController: UIViewController {
         content.title = "Reminder"
         content.body = "Don't forget to take your medicine!"
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600, repeats: true)
         
         let request = UNNotificationRequest(identifier: "MedicineReminder", content: content, trigger: trigger)
         

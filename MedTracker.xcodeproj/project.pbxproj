@@ -21,6 +21,10 @@
 		41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */; };
 		41E8981D2B9812DF00DE561D /* TrackersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8981C2B9812DF00DE561D /* TrackersListView.swift */; };
 		41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAD9522B8A517000B5224F /* DosageSchedule.swift */; };
+		8F1C10332BC352E200EA9A95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10322BC352E200EA9A95 /* SettingsView.swift */; };
+		8F1C10352BC356DC00EA9A95 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */; };
+		8F1C10372BC399D000EA9A95 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10362BC399D000EA9A95 /* LanguageManager.swift */; };
+		8F1C10392BC3A02400EA9A95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */; };
 		8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersListViewModel.swift; sourceTree = "<group>"; };
 		41E8981C2B9812DF00DE561D /* TrackersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersListView.swift; sourceTree = "<group>"; };
 		41EAD9522B8A517000B5224F /* DosageSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageSchedule.swift; sourceTree = "<group>"; };
+		8F1C10322BC352E200EA9A95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		8F1C10362BC399D000EA9A95 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewControllerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +97,10 @@
 				41E8981A2B98117B00DE561D /* TrackersListViewModel.swift */,
 				41E8981C2B9812DF00DE561D /* TrackersListView.swift */,
 				8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */,
+				8F1C10322BC352E200EA9A95 /* SettingsView.swift */,
+				8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */,
+				8F1C10362BC399D000EA9A95 /* LanguageManager.swift */,
+				8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */,
 			);
 			path = MedTracker;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 415871EF2B60B3DA0043D30F;
 			productRefGroup = 415871F92B60B3DA0043D30F /* Products */;
@@ -162,6 +175,7 @@
 			files = (
 				415872082B60B3DB0043D30F /* LaunchScreen.storyboard in Resources */,
 				415872052B60B3DB0043D30F /* Assets.xcassets in Resources */,
+				8F1C10392BC3A02400EA9A95 /* Localizable.xcstrings in Resources */,
 				415872032B60B3DA0043D30F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,12 +193,15 @@
 				415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */,
 				41E8980F2B979A1200DE561D /* medTracker.swift in Sources */,
 				41E898152B97F55E00DE561D /* TrackerRow.swift in Sources */,
+				8F1C10332BC352E200EA9A95 /* SettingsView.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,
 				41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */,
+				8F1C10372BC399D000EA9A95 /* LanguageManager.swift in Sources */,
 				8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */,
 				41E898172B97F8B000DE561D /* MedTrackerStore.swift in Sources */,
 				41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */,
 				41E8981D2B9812DF00DE561D /* TrackersListView.swift in Sources */,
+				8F1C10352BC356DC00EA9A95 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
