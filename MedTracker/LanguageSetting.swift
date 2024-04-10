@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LanguageManager {
+struct LanguageSetting {
     
     static func setLanguage() {
         if UserDefaults.standard.object(forKey: "selectedLanguage") == nil {

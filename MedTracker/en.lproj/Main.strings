@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "MedTracker"; ObjectID = "7vE-0G-3Df"; */
+"7vE-0G-3Df.text" = "MedTracker";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Bng-Yn-GFn"; */
+"Bng-Yn-GFn.text" = "Description";
+
+/* Class = "UILabel"; text = "Tracker Name"; ObjectID = "HrF-cN-6iP"; */
+"HrF-cN-6iP.text" = "Tracker Name";
+
+/* Class = "UILabel"; text = "Create New Tracker"; ObjectID = "ZhR-pn-syy"; */
+"ZhR-pn-syy.text" = "Create New Tracker";
+
+/* Class = "UILabel"; text = "Dosages Left"; ObjectID = "ash-bm-tBt"; */
+"ash-bm-tBt.text" = "Dosages Left";
+
+/* Class = "UIButton"; configuration.title = "Create New Tracker"; ObjectID = "azP-AV-iuP"; */
+"azP-AV-iuP.configuration.title" = "Create New Tracker";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "azP-AV-iuP"; */
+"azP-AV-iuP.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "gHc-OL-v2y"; */
+"gHc-OL-v2y.configuration.title" = "Save";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gHc-OL-v2y"; */
+"gHc-OL-v2y.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "My Trackers"; ObjectID = "ihE-1n-XRZ"; */
+"ihE-1n-XRZ.configuration.title" = "My Trackers";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ihE-1n-XRZ"; */
+"ihE-1n-XRZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Take Photo"; ObjectID = "oJV-qz-aTn"; */
+"oJV-qz-aTn.configuration.title" = "Take Photo";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oJV-qz-aTn"; */
+"oJV-qz-aTn.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Home"; ObjectID = "onf-IN-jP6"; */
+"onf-IN-jP6.configuration.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "onf-IN-jP6"; */
+"onf-IN-jP6.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Physicians Nearby"; ObjectID = "rVJ-cD-AR8"; */
+"rVJ-cD-AR8.configuration.title" = "Physicians Nearby";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rVJ-cD-AR8"; */
+"rVJ-cD-AR8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Type of Medicine"; ObjectID = "utR-zR-ZyW"; */
+"utR-zR-ZyW.text" = "Type of Medicine";
