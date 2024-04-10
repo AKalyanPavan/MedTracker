@@ -17,13 +17,13 @@ struct TrackerRow: View {
                 .clipShape(RoundedRectangle(cornerRadius: 8))
                 .frame(width: 75, height: 75)
             VStack(alignment: .leading) {
-                Text(medTracker.name)
+                Text(NSLocalizedString(medTracker.name, comment: ""))
                     .font(.largeTitle)
                 Text("\(String(medTracker.dosagesLeft)) Dosages")
                 Spacer()
-                Text(medTracker.type)
+                Text(NSLocalizedString(medTracker.type, comment: ""))
                 Spacer()
-                Text(medTracker.description)
+                Text(NSLocalizedString(medTracker.description, comment: ""))
             }
             .frame(height: 100)
         }

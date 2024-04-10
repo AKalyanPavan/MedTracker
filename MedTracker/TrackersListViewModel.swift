@@ -27,7 +27,7 @@ final class TrackersListViewModel: ObservableObject {
     }
     
     var displayCount: String {
-        "\(listData.count) Trackers"
+        NSLocalizedString("\(listData.count) Trackers", comment: "")
     }
     
     func filterSearchResults(){

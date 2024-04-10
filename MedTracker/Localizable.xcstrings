@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "(listData.count) Trackers" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(listData.count) Traqueurs"
+          }
+        }
+      }
+    },
     "%@ Dosages" : {
       "localizations" : {
         "fr" : {
@@ -32,6 +42,7 @@
       }
     },
     "Choose Your Preferred Language" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -99,6 +110,7 @@
       }
     },
     "English" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -109,6 +121,7 @@
       }
     },
     "French" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -119,6 +132,7 @@
       }
     },
     "Language" : {
+      "extractionState" : "stale",
       "localizations" : {
         "fr" : {
           "stringUnit" : {
@@ -145,6 +159,28 @@
         }
       }
     },
+    "Physicians Nearby" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Médecins à proximité"
+          }
+        }
+      }
+    },
+    "Sample" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échantillon"
+          }
+        }
+      }
+    },
     "Search for Trackers" : {
       "localizations" : {
         "fr" : {
@@ -161,6 +197,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paramètres"
+          }
+        }
+      }
+    },
+    "Syrup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sirop"
           }
         }
       }

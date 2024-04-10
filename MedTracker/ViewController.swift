@@ -12,11 +12,20 @@ import UserNotifications
 class ViewController: UIViewController {
     
     var medTrackers: [MedTracker] = []
+    let languageSetting = LanguageSetting()
+    
+    @IBOutlet weak var mytrackerbtn: UIButton!
+    @IBOutlet weak var createNewTrackerBtn: UIButton!
+    @IBOutlet weak var physiciansNearbyBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ThemeManager.applyTheme()
+        
+        mytrackerbtn.setTitle(NSLocalizedString("My Trackers", comment: ""), for: .normal)
+        createNewTrackerBtn.setTitle(NSLocalizedString("Create New Tracker", comment: ""), for: .normal)
+        physiciansNearbyBtn.setTitle(NSLocalizedString("Physicians Nearby", comment: ""), for: .normal)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .plain, target: self, action: #selector(didTapSettings))
         

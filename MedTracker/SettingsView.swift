@@ -8,8 +8,8 @@
 import SwiftUI
 
 enum SupportedLanguage: String {
-    case english = "english"
-    case french = "french"
+    case english = "en"
+    case french = "fr"
 }
 
 struct SettingsView: View {
@@ -26,26 +26,26 @@ struct SettingsView: View {
                             ThemeManager.applyDarkMode(newValue)
                         }
                 }
-                Section(header: Text(LocalizedStringKey("Choose Your Preferred Language"))) {
-                    Picker("Language", selection: $selectedLanguage) {
-                        Text("English").tag(SupportedLanguage.english)
-                        Text("French").tag(SupportedLanguage.french)
-                    }
-                }
-                .onChange(of: selectedLanguage) { newValue in
-                    print("Selected language changed to:", newValue)
-                    languageSetting.setLocale(language: newValue)
-                }
-                .onAppear {
-                    if languageSetting.locale.identifier.contains("fr") {
-                        print("OnAppear Device language is French.")
-                        selectedLanguage = .french
-                    } else {
-                        print("OnAppear  Device language is English.")
-                        selectedLanguage = .english
-                    }
-                }
-                .pickerStyle(MenuPickerStyle())
+//                Section(header: Text(LocalizedStringKey("Choose Your Preferred Language"))) {
+//                    Picker("Language", selection: $selectedLanguage) {
+//                        Text("English").tag(SupportedLanguage.english)
+//                        Text("French").tag(SupportedLanguage.french)
+//                    }
+//                }
+//                .onChange(of: selectedLanguage) { newValue in
+//                    print("Selected language changed to:", newValue)
+//                    languageSetting.setLocale(language: newValue)
+//                }
+//                .onAppear {
+//                    if languageSetting.locale.identifier.contains("fr") {
+//                        print("OnAppear Device language is French.")
+//                        selectedLanguage = .french
+//                    } else {
+//                        print("OnAppear  Device language is English.")
+//                        selectedLanguage = .english
+//                    }
+//                }
+//                .pickerStyle(MenuPickerStyle())
             }
         }
         .listStyle(GroupedListStyle())

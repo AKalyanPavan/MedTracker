@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="height" constant="49" id="xls-dN-Mwh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="My Trackers"/>
+                                <buttonConfiguration key="configuration" style="filled"/>
                                 <connections>
                                     <action selector="gotoMyTrackers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dm5-SY-eqT"/>
                                 </connections>
@@ -94,6 +94,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N03-tp-L6z"/>
+                    <connections>
+                        <outlet property="createNewTrackerBtn" destination="azP-AV-iuP" id="uyP-Lp-AD1"/>
+                        <outlet property="mytrackerbtn" destination="ihE-1n-XRZ" id="a6Q-Yh-MnT"/>
+                        <outlet property="physiciansNearbyBtn" destination="rVJ-cD-AR8" id="Tj3-M5-zkr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

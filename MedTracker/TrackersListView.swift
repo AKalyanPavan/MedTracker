@@ -31,8 +31,8 @@ struct TrackersListView: View {
                     Spacer()
                 }
             }
-            .navigationTitle(Text(viewModel.navTitle))
-            .searchable(text: $viewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for Trackers")
+            .navigationTitle(Text("My Trackers"))
+            .searchable(text: $viewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search for Trackers"))
             .onChange(of: viewModel.searchTerm) {
                 viewModel.filterSearchResults()
             }
@@ -43,8 +43,10 @@ struct TrackersListView: View {
 //                    }
                     EditButton()
                     Spacer()
-                    Button("Delete All") {
+                    Button(action: {
                         showAlert = true
+                    }) {
+                        Text("Delete All")
                     }
                     .alert(isPresented: $showAlert){
                         Alert(
