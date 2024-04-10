@@ -23,7 +23,7 @@
 		41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EAD9522B8A517000B5224F /* DosageSchedule.swift */; };
 		8F1C10332BC352E200EA9A95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10322BC352E200EA9A95 /* SettingsView.swift */; };
 		8F1C10352BC356DC00EA9A95 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */; };
-		8F1C10372BC399D000EA9A95 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10362BC399D000EA9A95 /* LanguageManager.swift */; };
+		8F1C10372BC399D000EA9A95 /* LanguageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1C10362BC399D000EA9A95 /* LanguageSetting.swift */; };
 		8F1C10392BC3A02400EA9A95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */; };
 		8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */; };
 /* End PBXBuildFile section */
@@ -47,8 +47,10 @@
 		41EAD9522B8A517000B5224F /* DosageSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageSchedule.swift; sourceTree = "<group>"; };
 		8F1C10322BC352E200EA9A95 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
-		8F1C10362BC399D000EA9A95 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		8F1C10362BC399D000EA9A95 /* LanguageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSetting.swift; sourceTree = "<group>"; };
 		8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		8F1C103B2BC3B08700EA9A95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		8F1C103D2BC3B08800EA9A95 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewControllerWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +101,7 @@
 				8F5F82D12BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift */,
 				8F1C10322BC352E200EA9A95 /* SettingsView.swift */,
 				8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */,
-				8F1C10362BC399D000EA9A95 /* LanguageManager.swift */,
+				8F1C10362BC399D000EA9A95 /* LanguageSetting.swift */,
 				8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */,
 			);
 			path = MedTracker;
@@ -196,7 +198,7 @@
 				8F1C10332BC352E200EA9A95 /* SettingsView.swift in Sources */,
 				415871FE2B60B3DA0043D30F /* SceneDelegate.swift in Sources */,
 				41EAD9532B8A517000B5224F /* DosageSchedule.swift in Sources */,
-				8F1C10372BC399D000EA9A95 /* LanguageManager.swift in Sources */,
+				8F1C10372BC399D000EA9A95 /* LanguageSetting.swift in Sources */,
 				8F5F82D22BB2753200FF2741 /* CreateNewTrackerViewControllerWrapper.swift in Sources */,
 				41E898172B97F8B000DE561D /* MedTrackerStore.swift in Sources */,
 				41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */,
@@ -212,6 +214,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				415872022B60B3DA0043D30F /* Base */,
+				8F1C103B2BC3B08700EA9A95 /* en */,
+				8F1C103D2BC3B08800EA9A95 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

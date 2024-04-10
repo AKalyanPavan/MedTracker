@@ -7,33 +7,49 @@
 
 import SwiftUI
 
+enum SupportedLanguage: String {
+    case english = "english"
+    case french = "french"
+}
+
 struct SettingsView: View {
     @State private var darkModeEnabled = UserDefaults.standard.bool(forKey: "darkModeEnabled")
-    @State private var selectedLanguage = UserDefaults.standard.string(forKey: "selectedLanguage") ?? "en"
+    @State var languageSetting = LanguageSetting()
+    @State private var selectedLanguage = SupportedLanguage.english
     
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Theme")) {
+                Section(header: Text(LocalizedStringKey("Theme"))) {
                     Toggle("Dark Mode", isOn: $darkModeEnabled)
                         .onChange(of: darkModeEnabled) { newValue in
                             ThemeManager.applyDarkMode(newValue)
                         }
                 }
-                Section(header: Text("Choose Your Preferred Language")) {
+                Section(header: Text(LocalizedStringKey("Choose Your Preferred Language"))) {
                     Picker("Language", selection: $selectedLanguage) {
-                        Text("English").tag("en")
-                        Text("French").tag("fr")
+                        Text("English").tag(SupportedLanguage.english)
+                        Text("French").tag(SupportedLanguage.french)
                     }
-                    .onChange(of: selectedLanguage) {
-                        
-                    }
-                    .pickerStyle(MenuPickerStyle())
                 }
+                .onChange(of: selectedLanguage) { newValue in
+                    print("Selected language changed to:", newValue)
+                    languageSetting.setLocale(language: newValue)
+                }
+                .onAppear {
+                    if languageSetting.locale.identifier.contains("fr") {
+                        print("OnAppear Device language is French.")
+                        selectedLanguage = .french
+                    } else {
+                        print("OnAppear  Device language is English.")
+                        selectedLanguage = .english
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Settings")
         }
+        .listStyle(GroupedListStyle())
+        .navigationTitle("Settings")
     }
 }
 

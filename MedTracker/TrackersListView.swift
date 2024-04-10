@@ -31,7 +31,7 @@ struct TrackersListView: View {
                     Spacer()
                 }
             }
-            .navigationTitle(viewModel.navTitle)
+            .navigationTitle(Text(viewModel.navTitle))
             .searchable(text: $viewModel.searchTerm, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search for Trackers")
             .onChange(of: viewModel.searchTerm) {
                 viewModel.filterSearchResults()

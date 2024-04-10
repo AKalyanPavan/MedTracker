@@ -103,19 +103,19 @@
         <scene sceneID="DfH-Gs-MYo">
             <objects>
                 <viewController storyboardIdentifier="CreateNewTrackerViewController" id="ytT-JT-luN" customClass="CreateNewTrackerViewController" customModule="MedTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="IN0-tX-mbj">
+                    <view key="view" contentMode="scaleToFill" id="IN0-tX-mbj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-VJ-bEM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOI-VJ-bEM">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" id="1Qg-kR-DE8">
+                                    <view contentMode="scaleToFill" id="1Qg-kR-DE8">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Create New Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-pn-syy">
-                                                <rect key="frame" x="85" y="30" width="223" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhR-pn-syy">
+                                                <rect key="frame" x="85" y="771" width="223" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="7z3-nb-TPi"/>
                                                     <constraint firstAttribute="height" constant="30" id="D4Q-pl-g4A"/>
@@ -126,8 +126,8 @@
                                                 <color key="textColor" systemColor="systemGreenColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tracker Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-cN-6iP">
-                                                <rect key="frame" x="40" y="80" width="128" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracker Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrF-cN-6iP">
+                                                <rect key="frame" x="40" y="821" width="128" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="128" id="K6Z-bd-9eu"/>
                                                     <constraint firstAttribute="height" constant="24" id="lwP-pv-IWZ"/>
@@ -136,8 +136,8 @@
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-iR-Ewd">
-                                                <rect key="frame" x="40" y="114" width="313" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-iR-Ewd">
+                                                <rect key="frame" x="40" y="855" width="313" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="313" id="2DN-MY-yem"/>
                                                     <constraint firstAttribute="height" constant="50" id="Ui8-xn-Bn0"/>
@@ -145,8 +145,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type of Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utR-zR-ZyW">
-                                                <rect key="frame" x="40" y="184" width="159" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utR-zR-ZyW">
+                                                <rect key="frame" x="40" y="925" width="159" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="blH-0Y-rC8"/>
                                                     <constraint firstAttribute="width" constant="159" id="sQt-Ku-Y4p"/>
@@ -155,8 +155,8 @@
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Dosages Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ash-bm-tBt">
-                                                <rect key="frame" x="40" y="288" width="121" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosages Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ash-bm-tBt">
+                                                <rect key="frame" x="40" y="1029" width="121" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="g3q-Ub-NbC"/>
                                                     <constraint firstAttribute="width" constant="121" id="u6V-pP-AyC"/>
@@ -165,8 +165,8 @@
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-RM-Luj">
-                                                <rect key="frame" x="40" y="218" width="314" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-RM-Luj">
+                                                <rect key="frame" x="40" y="959" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6C6-By-tPJ"/>
                                                     <constraint firstAttribute="width" constant="314" id="MMn-X3-1WY"/>
@@ -174,8 +174,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-Jc-KPG">
-                                                <rect key="frame" x="40" y="322" width="314" height="50"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-Jc-KPG">
+                                                <rect key="frame" x="40" y="1063" width="314" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="314" id="OBM-Hf-8XI"/>
                                                     <constraint firstAttribute="height" constant="50" id="o4Q-z7-GyZ"/>
@@ -183,8 +183,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-Yn-GFn">
-                                                <rect key="frame" x="39.999999999999993" y="392" width="100.33333333333331" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bng-Yn-GFn">
+                                                <rect key="frame" x="39.999999999999993" y="1133" width="100.33333333333331" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="JlM-ne-ZyY"/>
                                                     <constraint firstAttribute="width" constant="100.33" id="Tw3-7y-0V5"/>
@@ -193,8 +193,8 @@
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="clG-7g-ZwC">
-                                                <rect key="frame" x="40" y="433" width="313" height="175"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="clG-7g-ZwC">
+                                                <rect key="frame" x="40" y="1174" width="313" height="175"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="175" id="R0N-ou-BIc"/>
@@ -204,8 +204,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHc-OL-v2y">
-                                                <rect key="frame" x="293" y="636" width="61" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHc-OL-v2y">
+                                                <rect key="frame" x="293" y="1377" width="61" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="lD8-o9-xge"/>
                                                     <constraint firstAttribute="width" constant="61" id="vSt-uG-UmJ"/>
@@ -216,7 +216,7 @@
                                                     <action selector="saveTracker:" destination="ytT-JT-luN" eventType="touchUpInside" id="W8l-lQ-c9x"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJV-qz-aTn">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJV-qz-aTn">
                                                 <rect key="frame" x="40" y="636" width="121" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Take Photo"/>
@@ -361,7 +361,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vdY-hv-3aL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hN7-68-odb" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="hN7-68-odb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zH5-R3-zqE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
