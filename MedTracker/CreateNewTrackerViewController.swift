@@ -19,6 +19,14 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var typeOfMedicineText: UITextField!
     @IBOutlet weak var dosagesLeft: UITextField!
     
+    @IBOutlet weak var createNewTrackerLabel: UILabel!
+    @IBOutlet weak var trackerNameLabel: UILabel!
+    @IBOutlet weak var typeOfMedicineLabel: UILabel!
+    @IBOutlet weak var dosagesLeftLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var takePhotoBtn: UIButton!
+    
     var medTrackers: [MedTracker] = []
     var medTrackerStore: MedTrackerStore = MedTrackerStore.testTrackersStore
     
@@ -39,6 +47,15 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
 
         let label3 = UILabel()
         label3.text = "Label 3"
+        
+        createNewTrackerLabel.text = NSLocalizedString("Create New Tracker", comment: "")
+        trackerNameLabel.text = NSLocalizedString("Tracker Name", comment: "")
+        typeOfMedicineLabel.text = NSLocalizedString("Type of Medicine", comment: "")
+        dosagesLeftLabel.text = NSLocalizedString("Dosages Left", comment: "")
+        descriptionLabel.text = NSLocalizedString("Description", comment: "")
+        
+        saveBtn.setTitle(NSLocalizedString("Take Photo", comment: ""), for: .normal)
+        takePhotoBtn.setTitle(NSLocalizedString("Save", comment: ""), for: .normal)
         
         nameOfTrackerText.contentHorizontalAlignment = .left
         nameOfTrackerText.adjustsFontSizeToFitWidth = false
@@ -199,11 +216,11 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return options[row]
+        return NSLocalizedString(options[row], comment: "")
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        typeOfMedicineText.text = options[row]
+        typeOfMedicineText.text = NSLocalizedString(options[row], comment: "")
     }
     
     @objc func doneButtonTapped() {

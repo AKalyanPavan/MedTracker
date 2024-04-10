@@ -41,6 +41,17 @@
         }
       }
     },
+    "Capsule" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capsule"
+          }
+        }
+      }
+    },
     "Choose Your Preferred Language" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -109,6 +120,37 @@
         }
       }
     },
+    "Description" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "Dosages Left" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doses restantes"
+          }
+        }
+      }
+    },
+    "Drops" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gouttes"
+          }
+        }
+      }
+    },
     "English" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -127,6 +169,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Français"
+          }
+        }
+      }
+    },
+    "Inhaler" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inhalateur"
           }
         }
       }
@@ -170,6 +223,17 @@
         }
       }
     },
+    "Powder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poudre"
+          }
+        }
+      }
+    },
     "Sample" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -177,6 +241,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Échantillon"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarder"
           }
         }
       }
@@ -212,12 +286,53 @@
         }
       }
     },
+    "Tablet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tablette"
+          }
+        }
+      }
+    },
+    "Take Photo" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capturer"
+          }
+        }
+      }
+    },
     "Theme" : {
       "localizations" : {
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thème"
+          }
+        }
+      }
+    },
+    "Tracker Name" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom du traqueur"
+          }
+        }
+      }
+    },
+    "Type of Medicine" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type de médicament"
           }
         }
       }
