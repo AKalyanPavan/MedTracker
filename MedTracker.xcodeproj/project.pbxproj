@@ -15,6 +15,7 @@
 		415872082B60B3DB0043D30F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 415872062B60B3DB0043D30F /* LaunchScreen.storyboard */; };
 		415AA8B62B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */; };
 		415AA8BC2B7C2546002B5CF7 /* PhysiciansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */; };
+		41A06E912BC8DB8A0039D271 /* EditTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A06E902BC8DB8A0039D271 /* EditTracker.swift */; };
 		41E8980F2B979A1200DE561D /* medTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8980E2B979A1200DE561D /* medTracker.swift */; };
 		41E898152B97F55E00DE561D /* TrackerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E898142B97F55E00DE561D /* TrackerRow.swift */; };
 		41E898172B97F8B000DE561D /* MedTrackerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E898162B97F8B000DE561D /* MedTrackerStore.swift */; };
@@ -39,6 +40,7 @@
 		415872092B60B3DB0043D30F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		415AA8B52B7C0A86002B5CF7 /* CreateNewTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTrackerViewController.swift; sourceTree = "<group>"; };
 		415AA8BB2B7C2546002B5CF7 /* PhysiciansViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiciansViewController.swift; sourceTree = "<group>"; };
+		41A06E902BC8DB8A0039D271 /* EditTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTracker.swift; sourceTree = "<group>"; };
 		41E8980E2B979A1200DE561D /* medTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medTracker.swift; sourceTree = "<group>"; };
 		41E898142B97F55E00DE561D /* TrackerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRow.swift; sourceTree = "<group>"; };
 		41E898162B97F8B000DE561D /* MedTrackerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedTrackerStore.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8F1C10342BC356DC00EA9A95 /* ThemeManager.swift */,
 				8F1C10362BC399D000EA9A95 /* LanguageSetting.swift */,
 				8F1C10382BC3A02400EA9A95 /* Localizable.xcstrings */,
+				41A06E902BC8DB8A0039D271 /* EditTracker.swift */,
 			);
 			path = MedTracker;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				41E898172B97F8B000DE561D /* MedTrackerStore.swift in Sources */,
 				41E8981B2B98117B00DE561D /* TrackersListViewModel.swift in Sources */,
 				41E8981D2B9812DF00DE561D /* TrackersListView.swift in Sources */,
+				41A06E912BC8DB8A0039D271 /* EditTracker.swift in Sources */,
 				8F1C10352BC356DC00EA9A95 /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

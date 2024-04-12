@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 struct MedTracker: Identifiable {
-    let id: UUID
-    let name: String
-    let type: String
-    let dosagesLeft: Int
-    let description: String
-    let image: UIImage
+    var id: UUID
+    var name: String
+    var type: String
+    var dosagesLeft: Int
+    var description: String
+    var image: UIImage
     
     /// Computed properties
     var imageName: String { name }

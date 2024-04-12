@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         //        myTrackersViewController.navigationItem.hidesBackButton = true
         //        self.navigationController!.pushViewController(myTrackersViewController, animated: true)
         
-        let trackersListView = TrackersListView(viewModel: TrackersListViewModel())
+        let trackersListView = TrackersListView(viewModel: TrackersListViewModel(), store: MedTrackerStore(medTrackers: []))
         let hostingController = UIHostingController(rootView: trackersListView)
         navigationController?.pushViewController(hostingController, animated: true)
     }

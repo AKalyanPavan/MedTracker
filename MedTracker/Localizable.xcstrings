@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "(listData.count) Trackers" : {
       "localizations" : {
         "fr" : {
@@ -130,6 +133,9 @@
         }
       }
     },
+    "Dosages" : {
+
+    },
     "Dosages Left" : {
       "localizations" : {
         "fr" : {
@@ -150,6 +156,9 @@
           }
         }
       }
+    },
+    "Edit Tracker" : {
+
     },
     "English" : {
       "extractionState" : "stale",
@@ -211,6 +220,9 @@
           }
         }
       }
+    },
+    "Name" : {
+
     },
     "Physicians Nearby" : {
       "extractionState" : "manual",

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TrackersListView: View {
     @State var viewModel: TrackersListViewModel
+    @State var store: MedTrackerStore
     @State var isAddingTracker = false;
     @State var showAlert = false;
     
@@ -18,7 +19,7 @@ struct TrackersListView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.listData) { tracker in
-                    TrackerRow(medTracker: tracker)
+                    TrackerRow(store: store, medTracker: tracker)
                 }
                 .onMove(perform: viewModel.moveTracker)
                 .onDelete(perform: viewModel.deleteTracker)
@@ -71,6 +72,6 @@ struct TrackersListView: View {
 
 struct TrackersListView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackersListView(viewModel: TrackersListViewModel())
+        TrackersListView(viewModel: TrackersListViewModel(), store: MedTrackerStore(medTrackers: []))
     }
 }

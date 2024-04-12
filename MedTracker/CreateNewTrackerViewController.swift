@@ -166,7 +166,7 @@ class CreateNewTrackerViewController: UIViewController, UIPickerViewDelegate, UI
         descriptionText.text = ""
         typeOfMedicineText.text = ""
         
-        let trackersListView = TrackersListView(viewModel: TrackersListViewModel())
+        let trackersListView = TrackersListView(viewModel: TrackersListViewModel(), store: MedTrackerStore.testTrackersStore)
                 let hostingController = UIHostingController(rootView: trackersListView)
                 present(hostingController, animated: true, completion: nil)
     }
